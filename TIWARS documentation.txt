@@ -22,5 +22,12 @@ List TIUP: Upgrades list
 5. Speed, number of seconds till shot, higher is better
 
 List TIWS: Save System
-1. X pos of fighter 1
-2. Y pos of fighter 1
+1. Save Status, unused Mechanic, in the works
+2. Save of LVULT 1
+3. Save of LVULT 2
+4. Save of LVULT 3
+5. Save of Current Health
+6. Save of X-pos of Fighter 1
+7. Save of Y-pos of Fighter 1
+8. Save of X-pos of Fighter 2
+9. Save of Y-pos of Fighter 2

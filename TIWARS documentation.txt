@@ -3,6 +3,13 @@ TI-Wars DEVELOPER'S DOCUMENTATION V1.1
 STRINGS USED:
 N/A
 
+PICTURES USED:
+Pic 5, Loading Screen
+Pic 6,Background
+
+Plots used:
+Plot1, Stars Animation
+
 List VULT: Oppnent List
 1. Stage
 2. Health of Fighter 1
@@ -31,3 +38,5 @@ List TIWS: Save System
 7. Save of Y-pos of Fighter 1
 8. Save of X-pos of Fighter 2
 9. Save of Y-pos of Fighter 2
+
+Varibles Used:

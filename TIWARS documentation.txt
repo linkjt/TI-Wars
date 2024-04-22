@@ -39,4 +39,22 @@ List TIWS: Save System
 8. Save of X-pos of Fighter 2
 9. Save of Y-pos of Fighter 2
 
+List1: List for star falling effect
+List2: Used for star falling effect
+
 Varibles Used:
+A: X-pos of Cursor and used for For() loops, soon will be optmized
+B. Y-pos of Cursor
+C: X-pos of Enemy 1
+D. Y-pos of Enemy 1 and cursor point in menu
+E: X-pos of Enemy 2
+F. Y-pos of Enemy 2
+K. getKey key
+X. used for For() loops
+P. used for other For() loops
+Y: Also used for animations, soon to be removed
+L: Drawing things, soon to be shaved down
+M: Also Drawing things, also soon to be sharved down
+F: As guessed, Drawing things, soon to be gone
+Q: In game status of Proton Torpedos
+T: Time per stage, increased by game clock

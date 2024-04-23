@@ -58,3 +58,18 @@ M: Also Drawing things, also soon to be sharved down
 F: As guessed, Drawing things, soon to be gone
 Q: In game status of Proton Torpedos
 T: Time per stage, increased by game clock
+
+
+GAME INFO:
+Normal Vulture Droids: 50 Health, normal speed, 10 damage
+Hyeana Bombers: 75 Health, normal speed, 15 damage
+Droid Carrier: 125 Health, Slow Speed, 5 damage
+Genosian Star Fighter: 100 Health, Fast Speed, 15 damage
+Boss, Genosian Spy Star Fighter: 125 Health, Fast, 20 Damage
+
+Normal Stats:
+-Health: 100
+-Damage: 25
+-Speed: 30
+-Proton Status: 0
+-Proton Damage: 50

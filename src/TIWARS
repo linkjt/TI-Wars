@@ -1,1 +1,973 @@
+:"StarWars Clone Star Fighter Game"
+:"CCCCCCCCCDDDCCCCEEEEEECCCEECCCCCDDDCC22222CCEECCCDDD2222222CCDDDEEC226666622CDDDCC22266666222CCEEC22662226622CDDCC66666666666CCCCC66666666666CCCCC22662226622CCEEC22266666222CCDDDC226666622CDDDEEEE2222222CCCCCDDDDD22222CCCCCEEEEDDDDDDDEEEECCCDDEEDDCCCCCCCCC
 
+ZStandard
+­10→Xmin
+010→Xmax
+­10→Ymin
+010→Ymax
+AxesOff
+
+PlotsOff 
+FnOff 
+
+TextColor(LTBLUE
+BackgroundOn WHITE
+BorderColor 4
+Lbl D
+0.6→D
+getKey→K
+RecallPic 5
+UnArchive ⌊CED
+
+
+Text(50,20,"New Game"
+Text(70,20,"Load Save
+Text(90,20,"About"
+Text(110,20,"Tutorial
+Text(130,20,"Hanger
+Text(0,160,"Credits: ",⌊CED(4),"φ"
+
+
+
+
+Archive ⌊CED
+Repeat K=22
+getKey→K
+Pt-On(­9,D,NAVY
+Pt-On(­3,D,NAVY
+If K=25 and D≠5.6
+Then
+Pt-On(­3,D,WHITE
+Pt-On(­9,D,WHITE
+(D+2.5)→D
+End
+If K=25 and D=5.6
+Then
+Pt-On(­3,D,WHITE
+Pt-On(­9,D,WHITE
+­6.9→D
+End
+If K=34 and D=­6.9
+Then
+Pt-On(­3,D,WHITE
+Pt-On(­9,D,WHITE
+5.6→D
+End
+If K=34 and D≠­6.9
+Then
+Pt-On(­9,D,WHITE
+Pt-On(­3,D,WHITE
+(D-2.5)→D
+End
+If D=3.1 and K=105
+Goto A
+If D=0.6 and K=105
+Then
+UnArchive ⌊TIWS
+⌊TIWS(2)→⌊VULT(1)
+⌊TIWS(3)→⌊VULT(2)
+⌊TIWS(4)→⌊VULT(3)
+⌊TIWS(5)→H
+⌊TIWS(6)→C
+⌊TIWS(7)→D
+⌊TIWS(8)→E
+⌊TIWS(9)→F
+Archive ⌊TIWS
+Goto E
+End
+If D=­1.9 and K=105
+Goto C
+If D=­4.4 and K=105
+Goto B
+If D=­6.9 and K=105
+Goto K
+End
+ClrDraw
+ClrHome
+Stop
+Lbl A
+
+TextColor(YELLOW
+BackgroundOn WHITE
+For(X,10,­10,­.2
+Line(­10,X,10,X,BLACK
+End
+BackgroundOn BLACK
+
+PlotsOn 1
+For(P,150,­080,­10
+ClrDraw
+If P>0
+Text(P,20,"WELCOME TROOPER, YOU ARE CT-2718
+If P+20<160 and P+20>0
+Text(P+20,20,"KNOWN TO YOUR BROTHERS AS EUILER
+If P+40<160 and P+40>0
+Text(P+40,30,"YOU DEFEND THE REBUBLIC SKYS
+If P+60<160 and P+60>0
+Text(P+60,25,"NOW YOU ARE CALLED ON TO FIGHT,
+If P+80<160 and P+80>0
+Text(P+80,30,"AND GIVE YOUR LIFE IF NEEDED
+If P+120<160 and P+120>0
+Text(P+120,80,"THIS IS 0 HOUR
+If P+140<160 and P+120>0
+Text(P+140,80,"CLONE WARS
+Wait .5
+End
+
+
+BackgroundOn BLACK
+DispGraph
+For(A,1,160,1
+randInt(­020,020)/2→L₁(A)
+randInt(­020,060)/2→L₂(A)
+End
+While max(L₂)>10
+Plot1(Scatter,L₁,L₂,·,WHITE
+L₂-1→L₂
+DispGraph
+End
+
+
+TextColor(RED
+­5.5→Y
+For(X,3,7.5,0.3
+Line(X,Y,­X,Y,WHITE
+(Y-0.15)→Y
+End
+Line(­7.5,­7.5,7.5,­7.5,LTGRAY
+Line(­7.75,­7.75,2.5,­7.75,GRAY
+Line(­7.63,­7.63,7.63,­7.63,GRAY
+Line(­8.75,­8.75,­7,­8.75,GRAY
+Line(­3,­8.75,2.5,­8.75,GRAY
+Line(8.1,­8.75,8.75,­8.75,GRAY
+Line(­8.25,­8.25,­7,­8.25,GRAY
+Line(­3,­8.25,2.5,­8.25,GRAY
+Line(8.1,­8.25,8.25,­8.25,GRAY
+Line(­8.0,­8.0,8.0,­8.0,GRAY
+Line(­8.5,­8.5,­7,­8.5,GRAY
+Line(­3,­8.5,2.5,­8.5,GRAY
+Line(8.1,­8.5,8.5,­8.5,GRAY
+Line(­9.0,­9.0,­7,­9.0,GRAY
+Line(­3.0,­9.0,2.5,­9.0,GRAY
+Line(8.1,­9.0,9.0,­9.0,GRAY
+Line(­9.25,­9.25,­7,­9.25,GRAY
+Line(­3,­9.25,2.5,­9.25,GRAY
+Line(8.1,­9.25,9.25,­9.25,GRAY
+Line(­9.5,­9.5,­7,­9.5,GRAY
+Line(­3,­9.5,2.5,­9.5,GRAY
+Line(8.1,­9.5,9.5,­9.5,GRAY
+Line(­9.75,­9.75,­7,­9.75,GRAY
+Line(­3,­9.75,2.5,­9.75,GRAY
+Line(8.1,­9.75,9.75,­9.75,GRAY
+Line(­10,­10,­7,­10,GRAY
+Line(­03,­10,2.5,­10,GRAY
+Line(8.1,­10,10,­10,GRAY
+Line(­7.5,­7.5,­10,10,LTGRAY
+Line(7.5,­7.5,10,10,LTGRAY
+Line(­7.5,­7.5,­3,­5.5,RED
+Line(7.5,­7.5,3,­5.5,RED
+Line(­10,­10,­7.5,­7.5,LTGRAY
+Line(10,­10,7.5,­7.5,LTGRAY
+Line(­3,­5.5,3,­5.5,RED
+For(X,­1,1,0.15
+Line(X,­5.5,X,­7.3,RED
+End
+­7.9→L
+­4.5→M
+For(F,­6,­10,­.2
+Line(­10,F,L,M,WHITE
+Line(10,F,­L,M,WHITE
+(L+0.015)→L
+(M-0.14)→M
+End
+For(X,0,0.5,.1
+Circle(­9,­6.7,X,RED
+End
+Circle(­9,­6.7,X,LTGRAY
+For(X,0,0.5,.1
+Circle(9,­6.7,X,RED
+End
+Circle(9,­6.7,X,LTGRAY
+Line(0,­8,0,­9.5,BLACK
+Line(0.2,­8,0.1,­9.5,BLACK
+Line(­.2,­8,­.1,­9.5,BLACK
+Circle(0,­8,0.1,BLACK
+Circle(0,­8.0,.08,BLACK
+Circle(0,­8.1,.05,BLACK
+Text(150,40,"STAGE"
+Text(150,166,"HEALTH"
+PlotsOff 1
+
+RecallPic 6
+Pt-On(6,6,1,WHITE
+Pt-On(6.2,6.0,WHITE
+Pt-On(6.0,6.2,WHITE
+Pt-On(6.4,6.0,WHITE
+Pt-On(6.6,6.0,RED
+Pt-On(5.8,6.0,WHITE
+Pt-On(5.6,6.0,WHITE
+Pt-On(5.4,6.0,RED
+Pt-On(6.0,5.8,WHITE
+Pt-On(6.0,5.5,WHITE
+Pt-On(6.0,5.3,WHITE
+Pt-On(6.0,5.1,WHITE
+Pt-On(6,004.9,RED
+
+Pt-On(­4,­3,1,WHITE
+Pt-On(­4.2,­2.1,WHITE
+Pt-On(­4.0,­1.9,WHITE
+Pt-On(­4.4,­2.1,WHITE
+Pt-On(­4.6,­2.1,RED
+Pt-On(­3.8,­2.1,WHITE
+Pt-On(­3.6,­2.1,WHITE
+Pt-On(­3.4,­2.1,RED
+Pt-On(­4.0,­2.8,WHITE
+Pt-On(­4.0,­2.5,WHITE
+Pt-On(­4.0,­2.3,WHITE
+Pt-On(­4.0,­2.1,WHITE
+Pt-On(­4,­03.2,RED
+
+Pt-On(0,0,GRAY
+Pt-On((0+.4),0,NAVY
+Pt-On((0+.2),0,NAVY
+Pt-On((0-.4),0,NAVY
+Pt-On((0-.2),0,NAVY
+Pt-On((0-.4),(0+.3),NAVY
+Pt-On((0+.4),(0+.3),NAVY
+Pt-On((0+.4),(0-.3),NAVY
+Pt-On((0-.4),(0-.3),NAVY
+Pt-On(0-.07,(0-.1),4,RED
+Pt-On(0+.07,(0-.1),4,RED
+Pt-On(0-.07,(0+.1),4,RED
+Pt-On(0+.07,(0+.1),4,RED
+Pt-On(0-.07,0,4,RED
+Pt-On(0+.07,0,4,RED
+
+
+Wait 2
+Pt-On(0,0,3,RED
+Pt-On(6,5.8,1,ORANGE
+Pt-On(6,5.6,1,RED
+Wait 2
+Pt-On(6,6,2,ORANGE
+Pt-On(5.5,6,2,YELLOW
+Pt-On(6,5.5,2,RED
+Pt-On(6,005,2,ORANGE
+
+
+Pt-On(­4,­2.8,ORANGE
+
+Pt-On(­4,­2.6,RED
+Wait 2
+RecallPic 6
+
+Pt-On(0,0,GRAY
+Pt-On((0+.4),0,NAVY
+Pt-On((0+.2),0,NAVY
+Pt-On((0-.4),0,NAVY
+Pt-On((0-.2),0,NAVY
+Pt-On((0-.4),(0+.3),NAVY
+Pt-On((0+.4),(0+.3),NAVY
+Pt-On((0+.4),(0-.3),NAVY
+Pt-On((0-.4),(0-.3),NAVY
+Pt-On(0-.07,(0-.1),4,RED
+Pt-On(0+.07,(0-.1),4,RED
+Pt-On(0-.07,(0+.1),4,RED
+Pt-On(0+.07,(0+.1),4,RED
+Pt-On(0-.07,0,4,RED
+Pt-On(0+.07,0,4,RED
+
+Pt-On(­4,­3,1,WHITE
+Pt-On(­4.2,­2.1,WHITE
+Pt-On(­4.0,­1.9,WHITE
+Pt-On(­4.4,­2.1,WHITE
+Pt-On(­4.6,­2.1,RED
+Pt-On(­3.8,­2.1,WHITE
+Pt-On(­3.6,­2.1,WHITE
+Pt-On(­3.4,­2.1,RED
+Pt-On(­4.0,­2.8,WHITE
+Pt-On(­4.0,­2.5,WHITE
+Pt-On(­4.0,­2.3,WHITE
+Pt-On(­4.0,­2.1,WHITE
+Pt-On(­4,­03.2,RED
+
+Pt-On(­4,­2,2,ORANGE
+Pt-On(­3.5,­3,2,YELLOW
+Pt-On(­4,­2.5,2,RED
+Pt-On(­4,­2,2,ORANGE
+Wait 2
+RecallPic 6
+
+
+{1,050,00,100}→⌊VULT
+UnArchive ⌊TIUP
+⌊TIUP(1)→H
+Archive ⌊TIUP
+0→C
+0→D
+100→E
+100→F
+
+Lbl E
+UnArchive ⌊CED
+0→⌊CED(1)
+0→⌊CED(2)
+0→⌊CED(3)
+Archive ⌊CED
+1→Q
+0→T
+1→U
+AxesOff
+0→A
+0→B
+1→Q
+RecallPic 6
+getKey→K
+TextColor(RED
+Lbl G
+Repeat K=22
+
+
+getKey→K
+
+Text(150,80,⌊VULT(1)
+Text(150,215,H
+If K=26 and A≠7
+Then
+"
+RecallPic 6
+(A+1)→A
+End
+If K=25 and B≠9
+Then
+"
+RecallPic 6
+(B+1)→B
+End
+If K=24 and A≠­7
+Then
+"
+RecallPic 6
+(A-1)→A
+End
+If K=34 and B≠­5
+Then
+"
+RecallPic 6
+(B-1)→B
+End
+If K=25 or 26 or 24 or 34
+Then
+If Q=1
+Then
+Pt-On(A,B,RED
+Pt-On((A-.7),B,RED
+Pt-On((A-1),B,RED
+Pt-On((A+1),B,RED
+Pt-On((A+.7),B,RED
+Pt-On(A,(B-.7),RED
+Pt-On(A,(B+.7),RED
+Pt-On(A,(B-1),RED
+Pt-On(A,(B+1),RED
+End
+If Q=2 or Q=3
+Then
+Pt-On(A,B,MAGENTA
+Pt-On(A-.7,B,MAGENTA
+Pt-On(A+.7,B,MAGENTA
+Pt-On(A-0.9,B+0.2,MAGENTA
+Pt-On(A-0.9,B-0.2,MAGENTA
+Pt-On(A+0.9,B-0.2,MAGENTA
+Pt-On(A+0.9,B+0.2,MAGENTA
+If Q=3
+Then
+Pt-On(A,B-.7,MAGENTA
+Pt-On(A,B+.7,MAGENTA
+Pt-On(A-0.2,B+0.9,MAGENTA
+Pt-On(A+0.2,B+0.9,MAGENTA
+Pt-On(A-0.2,B-0.9,MAGENTA
+Pt-On(A+0.2,B-0.9,MAGENTA
+
+End
+End
+
+If 1=⌊VULT(1) or 2=⌊VULT(1) or ⌊VULT(1)=7
+Then
+Pt-On(C,D,GRAY
+Pt-On((C+.4),D,NAVY
+Pt-On((C+.2),D,NAVY
+Pt-On((C-.4),D,NAVY
+Pt-On((C-.2),D,NAVY
+Pt-On((C-.4),(D+.3),NAVY
+Pt-On((C+.4),(D+.3),NAVY
+Pt-On((C+.4),(D-.3),NAVY
+Pt-On((C-.4),(D-.3),NAVY
+
+Pt-On(C-.07,(D-.1),4,RED
+Pt-On(C+.07,(D-.1),4,RED
+Pt-On(C-.07,(D+.1),4,RED
+Pt-On(C+.07,(D+.1),4,RED
+Pt-On(C-.07,D,4,RED
+Pt-On(C+.07,D,4,RED
+
+
+End
+If ⌊VULT(1)=9
+Then
+Pt-On(C,D,ORANGE
+Pt-On(C,D,4,MAGENTA
+Pt-On(C,D+.1,4,MAGENTA
+Pt-On(C,D-.1,4,MAGENTA
+Pt-On(C,D-.4,BROWN
+Pt-On(C,D+.4,BROWN
+Pt-On(C,D+.5,BROWN
+
+Pt-On(C+.04,D+.5,4,LTGRAY
+Pt-On(C-.04,D+.5,4,LTGRAY
+Pt-On(C,D+.5,4,LTGRAY
+
+End
+If ⌊VULT(1)=6 or ⌊VULT(1)=7 or ⌊VULT(1)=8 or ⌊VULT(1)=9
+Then
+Pt-On(E,F,ORANGE
+Pt-On(E,F,4,MAGENTA
+Pt-On(E,F+.1,4,MAGENTA
+Pt-On(E,F-.1,4,MAGENTA
+Pt-On(E,F-.4,BROWN
+Pt-On(E,F+.4,BROWN
+Pt-On(E,F+.5,BROWN
+
+Pt-On(E+.04,F+.5,4,LTGRAY
+Pt-On(E-.04,F+.5,4,LTGRAY
+Pt-On(E,F+.5,4,LTGRAY
+
+
+End
+If ⌊VULT(1)=10
+Then
+End
+If ⌊VULT(1)=2 or ⌊VULT(1)=4 or ⌊VULT(1)=5
+Then
+Pt-On(E,F,GRAY
+Pt-On((E+.4),F,NAVY
+Pt-On((E+.2),F,NAVY
+Pt-On((E-.4),F,NAVY
+Pt-On((E-.2),F,NAVY
+Pt-On((E-.4),(F+.3),NAVY
+Pt-On((E+.4),(F+.3),NAVY
+Pt-On((E+.4),(F-.3),NAVY
+
+Pt-On(E+.07,(F-.1),4,RED
+Pt-On(E-.07,(F-.1),4,RED
+Pt-On(E+.07,(F+.1),4,RED
+Pt-On(E-.07,(F+.1),4,RED
+Pt-On(E+.07,(F),4,RED
+Pt-On(E-.07,(F),4,RED
+
+
+Pt-On((E-.4),(F-.3),NAVY
+End
+If ⌊VULT(1)=3 or ⌊VULT(1)=5 or ⌊VULT(1)=1
+Then
+Pt-On((C-0.2),D,RED
+Pt-On((C+.4),D,GRAY
+Pt-On((C),D,NAVY
+Pt-On((C-.4),D,NAVY
+Pt-On((C+.2),D,GRAY
+
+Pt-On((C+.263),D,4,RED
+Pt-On((C+.263),(D+0.1),4,RED
+Pt-On((C+.263),(D-0.1),4,RED
+Pt-On((C+.413),D,4,RED
+Pt-On((C+.413),(D+0.1),4,RED
+Pt-On((C+.413),(D-0.1),4,RED
+
+Pt-On((C-.6),D,NAVY
+Pt-On((C+.6),D,NAVY
+Pt-On((C-.6),(D+.3),NAVY
+Pt-On((C+.6),(D+.3),NAVY
+Pt-On((C+.6),(D-.3),NAVY
+Pt-On((C-.6),(D-.3),NAVY
+
+
+
+End
+If ⌊VULT(1)=4
+Then
+Pt-On(C,D,2,BROWN
+Pt-On(C,D,1,BROWN
+Pt-On((C+.4),D,2,BROWN
+Pt-On((C+.6),D,2,BROWN
+Pt-On((C+.6),D,1,BROWN
+Pt-On((C+0.4),D,1,BROWN
+Pt-On((C-.4),D,2,BROWN
+Pt-On((C-.4),D,1,BROWN
+Pt-On((C-.6),D,2,BROWN
+Pt-On((C-.6),D,1,BROWN
+Pt-On(C,(D-.6),2,BROWN
+Pt-On(C,(D-.6),1,BROWN
+Pt-On(C,(D-.8),1,ORANGE
+Pt-On((C-.7),(D+.3),1,BROWN
+Pt-On((C+0.7),(D+.3),1,BROWN
+Pt-On((C-.9),(D+.3),1,BROWN
+Pt-On((C+.9),(D+.3),1,BROWN
+Pt-On((C-1.1),(D+.3),1,ORANGE
+Pt-On((C+1.1),(D+.3),1,ORANGE
+End
+UnArchive ⌊TIUP
+If ⌊TIUP(3)=1
+Then
+Archive ⌊TIUP
+If K=12 and Q=3
+Then
+
+Line(A,B,A-.5,B+0.5,MAGENTA
+Line(A,B,A+.5,B+0.5,MAGENTA
+
+Line(A,B,A+.5,B-0.5,MAGENTA
+Line(A,B,A-.5,B-0.5,MAGENTA
+
+
+If A=E and B=F and K=12 and Q=3 or A=C and B=D and K=12 and Q=3
+Then
+2→Q
+Pt-On(A,B,RED
+Pt-On((A+.2),B,ORANGE
+Pt-On((A-.2),B,RED
+Pt-On(A,(B+.2),MAGENTA
+Pt-On(A,(B+.4),MAGENTA
+Pt-On(A,(B-.2),YELLOW
+Pt-On(A,(B-.4),MAGENTA
+Pt-On((A+.2),(B-.2),RED
+Pt-On((A+.2),(B+.2),ORANGE
+Pt-On((A-.2),(B+.2),MAGENTA
+Pt-On((A-.2),(B-.2),YELLOW
+If A=E
+(⌊VULT(3)-50)→⌊VULT(3)
+If A=C
+(⌊VULT(2)-50)→⌊VULT(2)
+4→Q
+
+End
+End
+
+If A=C and B=D and K=12 and Q=2 or A=E and B=F and K=12 and Q=2
+3→Q
+If K=12 and Q=1
+2→Q
+If Q=4
+2→Q
+
+End
+Archive ⌊TIUP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+If K=11
+Then
+1→Q
+
+Line(­5.3,­4.7,­3.8,­2.1
+Line(05.3,­4.7,03.8,­2.1
+
+UnArchive ⌊CED
+⌊CED(3)+1→⌊CED(3)
+Archive ⌊CED
+If A=C and B=D and K=11 and Q=1 or A=E and B=F and K=11 and Q=1
+Then
+Pt-On(A,B,RED
+Pt-On((A+.2),B,ORANGE
+Pt-On((A-.2),B,RED
+Pt-On(A,(B+.2),ORANGE
+Pt-On(A,(B+.4),ORANGE
+Pt-On(A,(B-.2),YELLOW
+Pt-On(A,(B-.4),YELLOW
+Pt-On((A+.2),(B-.2),RED
+Pt-On((A+.2),(B+.2),ORANGE
+Pt-On((A-.2),(B+.2),RED
+Pt-On((A-.2),(B-.2),YELLOW
+UnArchive ⌊TIUP
+If A=C
+(⌊VULT(2)-⌊TIUP(2))→⌊VULT(2)
+If A=E
+(⌊VULT(3)-⌊TIUP(2))→⌊VULT(3)
+Archive ⌊TIUP
+
+
+
+
+
+
+
+
+
+
+
+
+End
+End
+If ⌊VULT(3)≤0
+Then
+100→E
+100→F
+End
+If ⌊VULT(2)≤0
+Then
+100→C
+100→D
+End
+
+If (⌊VULT(2))≤0 and ⌊VULT(3)≤0
+Then
+Pause 
+UnArchive ⌊CED
+T+⌊CED(2)→⌊CED(2)
+Archive ⌊CED
+0→T
+1→U
+((⌊VULT(1)+1))→⌊VULT(1)
+50→⌊VULT(2)
+If ⌊VULT(1)=2
+Then
+50→⌊VULT(3)
+5→E
+0→F
+­5→C
+0→D
+End
+If ⌊VULT(1)=3
+Then
+75→⌊VULT(2)
+100→E
+100→F
+randInt(­4,9)→C
+randInt(­6,6)→D
+
+End
+If ⌊VULT(1)=4
+Then
+125→⌊VULT(2)
+randInt(­3,8)→C
+randInt(­5,5)→D
+50→⌊VULT(3)
+randInt(­3,8)→E
+randInt(­5,5)→F
+
+End
+If ⌊VULT(1)=5
+Then
+75→⌊VULT(2)
+randInt(­3,8)→C
+randInt(­5,5)→D
+50→⌊VULT(3)
+randInt(­3,8)→E
+randInt(­5,5)→F
+End
+If ⌊VULT(1)=6
+Then
+0→⌊VULT(2)
+0→C
+0→D
+100→⌊VULT(3)
+randInt(­3,8)→E
+randInt(­5,5)→F
+
+End
+If ⌊VULT(1)=7
+Then
+randInt(­3,8)→E
+randInt(­5,5)→F
+randInt(­3,8)→C
+randInt(­5,5)→D
+100→⌊VULT(3)
+25→⌊VULT(2)
+
+
+End
+If ⌊VULT(1)=8
+Then
+randInt(­3,8)→E
+randInt(­5,5)→F
+randInt(­3,8)→C
+randInt(­5,5)→D
+100→⌊VULT(3)
+75→⌊VULT(2)
+
+End
+End
+UnArchive ⌊TIUP
+If T=⌊TIUP(4)*U
+Then
+If ⌊VULT(1)=6
+Pt-On(C,D,3,MAGENTA
+If ⌊VULT(1)≠6
+Pt-On(C,D,3,RED
+Pt-On(02,­8,2,YELLOW
+Pt-On(02,­8.6,2,ORANGE
+Pt-On(02.6,­8,2,RED
+If ⌊VULT(1)=1 or ⌊VULT(1)=2
+(H-10)→H
+If ⌊VULT(1)=3
+(H-15)→H
+If ⌊VULT(1)=4
+(H-5)→H
+If ⌊VULT(1)=5
+(H-15)→H
+If ⌊VULT(1)=5
+(H-15)→H
+If ⌊VULT(1)=6
+(H-15)→H
+If ⌊VULT(1)=7
+(H-15)→H
+If ⌊VULT(1)=8
+(H-20)→H
+If ⌊VULT(1)=9
+(H-20)→H
+(U+1)→U
+
+End
+Archive ⌊TIUP
+If H≤0
+Then
+Text(­1,52,100,"GAME OVER"
+UnArchive ⌊CED
+⌊VULT(1)→⌊CED(1)
+⌊CED(2)+T→⌊CED(2)
+(((⌊CED(1)500)-⌊CED(2))-5⌊CED(3))+⌊CED(4)→⌊CED(4)
+Text(75,100,⌊CED(1)500-⌊CED(2)-5⌊CED(3),"CREDITS"
+
+
+Pause 
+ClrDraw
+ClrHome
+Stop
+End
+
+
+If ⌊VULT(1)=4
+randInt(1,8)→M
+If ⌊VULT(1)≠4
+randInt(1,6)→M
+randInt(1,6)→N
+If ⌊VULT(1)≥6
+randInt(1,5)→N
+
+If M=1 and D>­4 and ⌊VULT(1)≠6
+Then
+(D-1)→D
+
+
+RecallPic 6
+End
+If ⌊VULT(1)=2 and N=1 and F>­4 or ⌊VULT(1)≥4 and N=1 and F>­4
+(F-1)→F
+If M=2 and C<6 and ⌊VULT(1)≠6
+Then
+(C+1)→C
+
+
+RecallPic 6
+End
+If ⌊VULT(1)=2 and N=2 and E<6 or ⌊VULT(1)≥4 and N=2 and E<6
+(E+1)→E
+If M=3 and C>­6 and ⌊VULT(1)≠6
+Then
+(C-1)→C
+
+
+RecallPic 6
+End
+If ⌊VULT(1)=2 and N=3 and E>­6 or ⌊VULT(1)≥4 and N=3 and E>­6
+(E-1)→E
+If M=4 and D<9 and ⌊VULT(1)≠6
+Then
+(D+1)→D
+
+
+RecallPic 6
+End
+If ⌊VULT(1)=2 and N=4 and D<9 or ⌊VULT(1)≥4 and N=4 and D<9
+(F+1)→F
+If M≥5
+Then
+D→D
+C→C
+RecallPic 6
+If N=5 or N=6
+Then
+E→E
+F→F
+End
+End
+End
+If S≠1
+Then
+randInt(­3,8)→D
+randInt(­5,5)→C
+1→S
+End
+(T+1)→T
+End
+If K=22
+Then
+Line(­10,10,10,10,GRAY,4
+Text(­1,0,0,"Game Paused
+Text(20,0,"SAVE"
+Text(40,0,"RESUME"
+Text(60,0,"QUIT"
+
+4.3→P
+
+
+getKey→K
+Repeat K=22
+getKey→K
+Pt-On(­5.5,P,NAVY
+If K=25 and P≠6.8
+Then
+Pt-On(­5.5,P,GRAY
+(P+2.5)→P
+
+
+End
+If K=34 and P≠1.8
+Then
+Pt-On(­5.5,P,GRAY
+(P-2.5)→P
+
+
+End
+If P=1.8 and K=105
+Then
+ClrDraw
+ClrHome
+Stop
+End
+If P=4.3 and K=105
+Goto G
+If P=6.8 and K=105
+Then
+UnArchive ⌊TIWS
+1→⌊TIWS(1)
+⌊VULT(1)→⌊TIWS(2)
+⌊VULT(2)→⌊TIWS(3)
+⌊VULT(3)→⌊TIWS(4)
+H→⌊TIWS(5)
+C→⌊TIWS(6)
+D→⌊TIWS(7)
+E→⌊TIWS(8)
+F→⌊TIWS(9)
+
+
+Archive ⌊TIWS
+ClrDraw
+ClrHome
+Stop
+End
+
+End
+End
+If K=22
+Goto G
+
+
+
+
+
+Lbl B
+ClrDraw
+Text(­1,20,50,"THE BASICS:"
+Text(50,20,"Use the arrow keys to move"
+Text(70,20,"Use the Y= key to shoot"
+Text(90,20,"Vulture droids are 2 shots
+Text(110,20,"Hyenas are 3
+Text(130,20,"Droid carriers are 5"
+Pause 
+ClrDraw
+Goto D
+
+Lbl C
+ClrDraw
+Text(50,30,"DEVELOPED BY
+Text(­1,70,30,"LINKJT9
+Text(100,30,"v1.1 Beta: Sky High
+Text(130,30,"Thank you Fawks
+Pause 
+ClrDraw
+Goto D
+Lbl K
+RecallPic 5
+UnArchive ⌊CED
+UnArchive ⌊TIUP
+Text(0,160,"Credits: ",⌊CED(4),"φ"
+Archive ⌊CED
+Text(50,05,"Back
+
+
+Text(70,05,"Health+5,500
+Text(90,05,"Damage+5,1000
+Text(110,05,"Speed+3,2000
+Text(130,05,"Proton Torpedos,5000
+Text(150,05,"ProtonDamage+15,2000
+0.6→D
+Archive ⌊TIUP
+getKey→K
+Repeat K=16
+getKey→K
+
+Pt-On(­10,D,1,BLACK
+
+If K=25 and D≠3.1
+Then
+Pt-On(­10,D,1,WHITE
+D+2.5→D
+End
+If K=34 and D≠­9.4
+Then
+Pt-On(­10,D,1,WHITE
+D-2.5→D
+End
+UnArchive ⌊TIUP
+UnArchive ⌊CED
+Text(0,160,"Credits: ",⌊CED(4),"φ"
+If K=105 and D=3.1
+Goto D
+If K=105 and D=0.6 and ⌊TIUP(1)<200 and ⌊CED(4)≥500
+Then
+⌊TIUP(1)+5→⌊TIUP(1)
+⌊CED(4)-500→⌊CED(4)
+End
+If K=105 and D=­1.9 and ⌊TIUP(2)<45 and ⌊CED(4)≥1000
+Then
+⌊TIUP(2)+5→⌊TIUP
+⌊CED(4)-1000→⌊CED(4)
+End
+If K=105 and D=­4.4 and ⌊TIUP(5)<42 and ⌊CED(4)≥2000
+Then
+⌊TIUP(5)+3→⌊TIUP(5)
+⌊CED(4)-2000→⌊CED(4)
+End
+If K=105 and D=­6.9 and 0=⌊TIUP(3) and ⌊CED(4)≥5000
+Then
+1→⌊TIUP(3)
+⌊CED(4)-5000→⌊CED(4)
+End
+If K=105 and D=­9.4 and ⌊CED(4)≤2000 and ⌊TIUP(4)<110
+Then
+⌊TIUP(4)+15→⌊TIUP(4)
+⌊CED(4)-2000→⌊CED(4)
+End
+Archive ⌊TIUP
+End
